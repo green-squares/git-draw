@@ -29,6 +29,7 @@ class Git:
 
     def push(self):
         os.system(f"git push https://'{self.username}':'{self.personal_access_token}'@github.com/{self.repo_owner}/{self.repo_name}.git")
+        print(f"git push https://'{self.username}':'{self.personal_access_token}'@github.com/{self.repo_owner}/{self.repo_name}.git")
     
 def write_random_data():
     s = hashlib.sha256(bytes(str(random.randint(1e5, 1e6 - 1)),'utf-8')).hexdigest()
