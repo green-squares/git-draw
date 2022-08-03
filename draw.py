@@ -28,7 +28,7 @@ class Git:
         os.system(f'GIT_COMMITTER_NAME="{self.username}" GIT_COMMITTER_EMAIL="{self.email}" git commit --author="green-squares <{self.email}>" -a -m "{message}"')
 
     def push(self):
-        os.system(f"git push https://'{self.user}':'{self.personal_access_token}'@github.com/{self.repo_owner}/{self.repo_name}.git")
+        os.system(f"git push https://'{self.username}':'{self.personal_access_token}'@github.com/{self.repo_owner}/{self.repo_name}.git")
     
 def write_random_data():
     s = hashlib.sha256(bytes(str(random.randint(1e5, 1e6 - 1)),'utf-8')).hexdigest()
